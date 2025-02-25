@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMICalculator.Record"
+             Title="Record">
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--<Label
+           x:Name="displayRecord"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />-->
+
+            <CollectionView x:Name="displayRecord" ItemsSource="{Binding DateRecorded}">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="10* , 8* , 10* , 10*">
+                        <Label Grid.Column="0" Text="Date"  FontAttributes="Bold" Padding="5" BackgroundColor="Aquamarine"/>
+                        <Label Grid.Column="1" Text="Weight"  FontAttributes="Bold" Padding="5" BackgroundColor="Aquamarine"/>
+                        <Label Grid.Column="2" Text="BMI Result"  FontAttributes="Bold" Padding="5" BackgroundColor="Aquamarine"/>
+                        <Label Grid.Column="3" Text="BMI Status"  FontAttributes="Bold" Padding="5" BackgroundColor="Aquamarine" />
+                    </Grid>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <Grid ColumnDefinitions="14* , 8* , 10* , 10*">
+                                <Label Grid.Column="0" Text="{Binding DateRecorded}"  />
+                                <Label Grid.Column="1" Text="{Binding Weight}"  />
+                                <Label Grid.Column="2" Text="{Binding BmiResult}"  />
+                                <Label Grid.Column="3" Text="{Binding BmiStatus}"  />
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

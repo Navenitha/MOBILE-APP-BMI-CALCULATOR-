@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BMICalculator.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BMICalculator"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="Blue"
+    Shell.TitleColor="White"
+    Title="BMICalculator">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label Text="MENU" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+
+    <ShellContent
+        Title="BMI Calculator"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Record"
+        ContentTemplate="{DataTemplate local:Record}"
+        Route="Record" />
+    
+
+    <ShellContent
+       Title="Information"
+       ContentTemplate="{DataTemplate local:Information}"
+       Route="Information" />
+
+
+</Shell>

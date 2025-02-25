@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMICalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <StackLayout>
+                <Entry x:Name="inputWeight" Placeholder="Enter weight in kg" Keyboard="Numeric"/>
+                <Entry x:Name="inputHeight" Placeholder="Enter height in m" Keyboard="Numeric"/>
+            </StackLayout>
+            <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly">
+                <Button x:Name="calculateButton" Text="Calculate" VerticalOptions="CenterAndExpand" HeightRequest="60" WidthRequest="110" BackgroundColor="DarkRed" TextColor="White" Clicked="OnCalculateBMI"/>
+                <Button x:Name="resetButton" Text="Reset" VerticalOptions="CenterAndExpand" HeightRequest="60" WidthRequest="110" BackgroundColor="SlateGray" TextColor="White" Clicked="OnReset" />
+            </FlexLayout>
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Your BMI Result" HorizontalTextAlignment="Center"/>
+                <Label x:Name="outputResult" Text="0.00" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                <Label Text="BMI Status" HorizontalTextAlignment="Center"/>
+                <Label x:Name="outputBmiStatus" Text="Not Available" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+            </StackLayout>
+            <FlexLayout Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+                <ImageButton Source="calendaricon.png"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                         IsVisible="true"
+                         HorizontalOptions="End"
+                         />
+                <!-- <Label Text="Choose a date" HorizontalTextAlignment="Start" /> -->
+                <DatePicker x:Name="selectDate" DateSelected="onDatePickerSelected" Format="dd/MM/yyyy" WidthRequest="90" HeightRequest="50" HorizontalOptions="Start"  />
+            </FlexLayout>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Button x:Name="saveButton" Text="Save" VerticalOptions="CenterAndExpand" Clicked="OnSaveRecord"/> 
+            </StackLayout>
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
