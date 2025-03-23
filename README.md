@@ -1,21 +1,22 @@
 Features
-User-friendly interface for BMI calculation
 
-Input support for both metric (cm/kg) and imperial (ft/lbs) units
+-User-friendly interface for BMI calculation
 
-Categorizes BMI results (Underweight, Normal, Overweight, Obese)
+-Input support for both metric (cm/kg) and imperial (ft/lbs) units
 
-Informative BMI result screen with health tips
+-Categorizes BMI results (Underweight, Normal, Overweight, Obese)
 
-Lightweight and responsive design
+-Informative BMI result screen with health tips
+
+-Lightweight and responsive design
 
 Built using .NET MAUI 
 
 Technologies Used
-Visual Studio 2022
+-Visual Studio 2022
 
-.NET MAUI / Xamarin.Forms (select one)
+-.NET MAUI 
 
-C#
+-C#
 
-XAML for UI design
+-XAML for UI design
