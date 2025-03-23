@@ -1,3 +1,5 @@
+Built using .NET MAUI 
+
 Features
 
 -User-friendly interface for BMI calculation
@@ -10,9 +12,10 @@ Features
 
 -Lightweight and responsive design
 
-Built using .NET MAUI 
+
 
 Technologies Used
+
 -Visual Studio 2022
 
 -.NET MAUI 
